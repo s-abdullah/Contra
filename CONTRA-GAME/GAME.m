@@ -6,7 +6,7 @@ hold on;
 axis([0 600 -200 180])
 axis off
 %% SOUND
-[y fs] = wavread('contra_title.wav');
+[y fs] = audioread('contra_title.wav');
 handel = audioplayer(y,fs);
 sound(y,fs)
 

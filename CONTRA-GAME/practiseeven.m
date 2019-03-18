@@ -105,14 +105,14 @@ set(gcf, 'KeyPressFcn', 'keyPressed = get(gcf, ''CurrentCharacter'')');
 g = imagesc(im(1*h/8:1*h/8+h/8,1:w/8,:));
 set(g,'alphaData',aFront(1*h/8:2*h/8,1:w/8,:))
 %% sounds
-stage = wavread('Stage1.wav');
+stage = audioread('Stage1.wav');
 stageplay = audioplayer(stage,44100);
 play(stageplay)
 
 %death
-[y2 fs2] = wavread('explosion.wav');
+[y2 fs2] = audioread('explosion.wav');
 %explosion
-[Y FS] = wavread('explosion.wav');
+[Y FS] = audioread('explosion.wav');
 
 
 %% Action
@@ -1278,7 +1278,7 @@ SKULL = imagesc(skull);
 fghj = (AX1 + AX2)/2;
 set(SKULL,'xdata',[(fghj - 150) (fghj + 150)],'ydata',[-200 180],'alphadata',aFront);
 
-[y1 fs1] = wavread('contra_gameover.wav');
+[y1 fs1] = audioread('contra_gameover.wav');
 handel1 = audioplayer(y1,fs1);
 sound(y1,fs1)
 pause(10);
@@ -1290,7 +1290,7 @@ if WINNER == 1
     winner = imread('winner.jpg');
     Winner = imagesc(winner);
     set(Winner,'ydata',[-200 180],'xdata',[AX1 AX2]);
-    [Y1 FS1] = wavread('winn.wav');
+    [Y1 FS1] = audioread('winn.wav');
     sound(Y1,FS1);
     pause(15);
     GAME;
