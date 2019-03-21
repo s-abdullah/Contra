@@ -103,7 +103,7 @@ set(gcf, 'KeyPressFcn', 'keyPressed = get(gcf, ''CurrentCharacter'')');
 g = imagesc(im(1*h/8:1*h/8+h/8,1:w/8,:));
 set(g,'alphaData',aFront(1*h/8:2*h/8,1:w/8,:))
 %% sounds
-stage = audioread('Stage1.wav');
+stage = audioread('music.mp3');
 stageplay = audioplayer(stage,44100);
 play(stageplay)
 
